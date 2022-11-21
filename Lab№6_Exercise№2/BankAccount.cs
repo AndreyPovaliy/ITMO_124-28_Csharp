@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab_6_Exercise_1
+namespace Lab_6_Exercise_2
 {
     class BankAccount
     {
@@ -14,28 +14,24 @@ namespace Lab_6_Exercise_1
             accBal = balance;
             accType = AccountType.Checking;
         }
+
         public long Number()
         {
             return accNo;
         }
+
         public decimal Balance()
         {
             return accBal;
         }
 
-        public AccountType Type()
+        public string Type()
         {
-            return accType;
+            return accType.ToString();
         }
 
-       
         private long accNo;
         private decimal accBal;
         private AccountType accType;
-
-
     }
-
-
-
 }

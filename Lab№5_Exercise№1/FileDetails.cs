@@ -11,18 +11,10 @@ namespace Lab_5_Exercise_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(args.Length);
-            foreach (string arg in args)
-            {
-                Console.WriteLine(arg);
-            }
-
             string fileName = args[0];
 
             FileStream stream = new FileStream(fileName, FileMode.Open);
             StreamReader reader = new StreamReader(stream);
-
-
             int size = (int)stream.Length;
             char[] contents = new char[size];
             for (int i = 0; i < size; i++)
@@ -62,8 +54,6 @@ namespace Lab_5_Exercise_1
             Console.WriteLine("Total no of consonants: {0}", consonants);
             Console.WriteLine("Total no of lines : {0}", lines);
         }
-
-
 
     }
 }
