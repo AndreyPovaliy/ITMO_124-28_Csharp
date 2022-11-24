@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab_6_Exercise_2
+namespace Lab_6_Exercise_3
 {
+
     class BankAccount
     {
         public void Populate(decimal balance)
@@ -19,6 +20,11 @@ namespace Lab_6_Exercise_2
         {
             return accNo;
         }
+        public decimal Deposit(decimal amount)
+        {
+            accBal += amount;
+            return accBal;
+        }
 
         public decimal Balance()
         {
@@ -29,9 +35,14 @@ namespace Lab_6_Exercise_2
         {
             return accType.ToString();
         }
-        private static long NextNumber()
+        public bool Withdraw(decimal amount)
         {
-            return nextAccNo++;
+            bool sufficientFunds = accBal >= amount;
+            if (sufficientFunds)
+            {
+                accBal -= amount;
+            }
+            return sufficientFunds;
         }
 
 
@@ -39,6 +50,12 @@ namespace Lab_6_Exercise_2
         private decimal accBal;
         private AccountType accType;
 
-        private static long nextAccNo;
+        private static long nextNumber = 123;
+
+        private static long NextNumber()
+        {
+            return nextNumber++;
+        }
     }
+
 }

@@ -11,6 +11,7 @@ namespace Lab_5_Exercise_1
     {
         static void Main(string[] args)
         {
+
             string fileName = args[0];
 
             FileStream stream = new FileStream(fileName, FileMode.Open);

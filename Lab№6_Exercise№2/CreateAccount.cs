@@ -21,8 +21,9 @@ namespace Lab_6_Exercise_2
         {
             BankAccount created = new BankAccount();
 
-            Console.Write("Enter the account number   : ");
-            long number = long.Parse(Console.ReadLine());
+            //Console.Write("Enter the account number   : ");
+            //long number = long.Parse(Console.ReadLine());
+            //long number = BankAccount.NextNumber();
 
             Console.Write("Enter the account balance! : ");
             decimal balance = decimal.Parse(Console.ReadLine());
@@ -30,7 +31,7 @@ namespace Lab_6_Exercise_2
             //created.accNo = number;
             //created.accBal = balance;
             //created.accType = AccountType.Checking;
-            created.Populate(number, balance);
+            created.Populate(balance);
 
             return created;
         }
